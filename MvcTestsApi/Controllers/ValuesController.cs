@@ -45,5 +45,14 @@ namespace MvcTestsApi.Controllers
 
             return _returnValues[index];
         }
+        
+        public IHttpActionResult GetSomething(int? index)
+        {
+            if (index == null)
+                Return "Index not set";
+            else
+                Return "Index set to " + index;           
+        }
+
     }
 }
