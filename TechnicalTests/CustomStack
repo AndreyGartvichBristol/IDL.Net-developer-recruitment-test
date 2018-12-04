@@ -1,0 +1,24 @@
+namespace TechnicalTests
+{
+    // This is class to deal with List<int>
+    static class CustomStack {
+        static public int Peek(List<int> TheList)
+        { 
+            return TheList[TheList.Count - 1];
+        }
+        static public int Pop(ref List<int> TheList) 
+        {
+            return TheList.RemoveAt(TheList.Count - 1);            
+        }
+        
+        static public void Push(ref List<int> TheList, int TheElement) 
+        {
+             TheList.Add(TheElement);
+        }
+        
+        static public void Clear(ref List<int> TheList)
+        {
+            TheList.Clear();
+        }
+    }
+}
