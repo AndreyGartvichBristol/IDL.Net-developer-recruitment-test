@@ -1,0 +1,47 @@
+namespace TechnicalTests 
+{
+    [TestClass]
+    public class TestStack
+    {
+        [TestMethod]
+        public void TestPeek()
+        {
+            // Arrange
+            var theList = new List<int>(){0,1,2};
+            // Act
+            var theElement = CustomStack.Peek(theList);
+            // Assert
+            Assert.AreEqual(theElement,2);            
+        }
+        [TestMethod]
+        public void TestPop()
+        {
+            // Arrange
+            var theList = new List<int>(){0,1,2};
+            // Act
+            var theElement = CustomStack.Pop(ref theList);
+            // Assert
+            Assert.AreEqual(theElement,2);            
+        }
+        [TestMethod]
+        public void TestPush()
+        {
+            // Arrange
+            var theList = new List<int>(){0,1,2};
+            // Act
+            var theElement = CustomStack.Push(ref theList, 3);
+            // Assert
+            Assert.AreEqual(theList,new List<int>{0,1,2,3});            
+        }
+        [TestMethod]
+        public void TestClear()
+        {
+            // Arrange
+            var theList = new List<int>(){0,1,2};
+            // Act
+            CustomStack.Clear(theList);
+            // Assert
+            Assert.AreEqual(theList.Count,0);            
+        }
+    }
+}
