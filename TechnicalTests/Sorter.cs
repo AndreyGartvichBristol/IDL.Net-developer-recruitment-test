@@ -6,19 +6,19 @@ namespace TechnicalTests
     {
         public IList<T> BubbleSort<T>(IList<T> list, IComparer<T> comparer)
         {
-            bool incomplete = true;
-            while (!incomplete)
+            bool complete = false;
+            while (!complete)
             {
-                incomplete = false;
+                complete = true;
                 for (int i = 0; i < list.Count - 1; i++)
                 {
                     T x = list[i];
-                    T y = list[i - 1];
+                    T y = list[i + 1];
                     if (comparer.Compare(x, y) > 0)
                     {
                         list[i] = y;
                         list[i + 1] = x;
-                        incomplete = false;
+                        complete = false;
                     }
                 }
             }
