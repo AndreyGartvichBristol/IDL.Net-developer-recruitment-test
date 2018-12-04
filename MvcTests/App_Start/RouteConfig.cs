@@ -14,6 +14,11 @@ namespace MVCTests
             //    url: "{controller}/{action}/{id}",
             //    defaults: new { controller = "Test", action = "Index", id = UrlParameter.Optional }
             //);
+            routes.MapRoute(
+                name: "Invitation",
+                url: "/invitationdigital/tests/{index}",
+                defaults: new { id = UrlParameter.Optional }
+            );
         }
     }
 }
