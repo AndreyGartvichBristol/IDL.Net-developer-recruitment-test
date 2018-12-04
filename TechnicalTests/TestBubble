@@ -1,0 +1,37 @@
+namespace TechnicalTests
+{
+   public class Comparer : IComparer<int>
+   {
+    public int Compare(int a, int b)
+    {
+        if (a == b)
+            return 0;
+        if((a < b)
+            return -1;
+
+        return 1;
+    }
+  }
+
+  [TestClass]
+  public class TestBubble
+  {
+      [TestMethod]
+      public void Test()
+      {
+          // Arrange
+          var comparer = new Comparer();
+          var sorter = new Sorter();
+          var list = new List<int)(){1,0,2};
+          
+          
+          // Act
+          var result = sorter.BubleSort(list, sorter);
+          
+          // Asert
+          Assert.AreEqual(result, new List<int>(){0,1,2});
+          
+          
+
+  }
+}
